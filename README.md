@@ -1,5 +1,5 @@
 # 🚀 Data Analyst Portfolio: Business Intelligence & Analytics Engineering
-### Por: [Tu Nombre] | Perfil Junior-Mid (Evolutivo)
+### Por: Jacobo Galindo Ortiz | Perfil Junior-Mid (Evolutivo)
 
 ## 🎯 Declaración de Perfil Ejecutivo
 Analista de Datos orientado a Business Intelligence, Analytics Engineering y optimización de métricas de negocio. Especializado en el **aseguramiento de la calidad de datos (Data Quality)**, automatización de procesos y traducción de análisis estadísticos en recomendaciones accionables. Mi enfoque principal es tender puentes entre la complejidad técnica y los requerimientos de la **C-Suite**, comunicando hallazgos mediante estructuras de alto impacto (**C➔F➔I**) para maximizar el Revenue y la Eficiencia Operativa.
