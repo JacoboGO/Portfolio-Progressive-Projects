@@ -1,0 +1,66 @@
+Análisis exploratorio
+
+Se trabaja en: Excel online región Englis(USA)
+con formato de fecha: M/DD/YYYY
+Volumen de datos: 250,000 filas, 7 columnas
+		
+			order_id	order_date	product_id	quantity	customer_id	ship_date	store_region	
+Datos incorrectos	0		14989		0		0		0		0		0
+Nulos			0		0		0		0		0		2556		0
+Datos únicos		250000		186		10		15		1501		195		5
+							
+	
+
+Data set de 250,000 datos
+blancos 	2556
+Datos erróneos	22269
+
+Tratamiento de fecha
+
+se tiene 14989 datos incorrectos de fecha, el csv viene con formato dd-mm-yy. Derivado a que las condiciones actuales no detecta este tipo de formato, se procede a aplicar la siguiente fórmula:
+
+=IF(ISNUMBER([@[order_date]]), [@[order_date]], DATE(RIGHT([@[order_date]],4),
+MID([@[order_date]],4,2),
+LEFT([@[order_date]],2)))
+
+Se aplica condición, si detecta que es fecha, la deja como está, si no detecta que es fecha, procede a extraer cada parte y se reconfigura la fecha de acuerdo al formato de trabajo.
+
+Después de aplicar limpieza en tabla order, queda así los datos:
+
+			order_id	order_date	product_id	quantity	customer_id	ship_date	store_region	
+Datos incorrectos	0		0		0		0		0		0		0
+Nulos			0		0		0		0		0		2556		0
+Datos únicos		250000		186		10		15		1501		195		5
+
+En tabla inventory status se revisan los datos y no se encontraron errores.
+
+En tabla product_dim se encuentra que la columna category tiene espacios, mezcla de minúsculas y mayúsculas, caracteres no reconocidos. Se realiza limpieza con trim, clean, upper y substitute.
+
+Se procede con la obtención de min, max, promedio, mediana de la columna calculada lead_time (Fecha de entrega - fecha pedido)
+
+Se encuentra que el 4.0% de los datos da resultado negativo, se considera un porcentaje bajo y se excluyen los datos.
+
+lead_time	
+count values < 0	9991	(4.00%)
+count values >=0	240009
+Min			0	
+Max			157	
+Average			4.29	
+Median			3	
+Standard deviacion	4637.85
+(population) 
+
+Deriva
+
+
+
+
+
+
+
+
+
+
+
+
+
