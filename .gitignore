@@ -1,3 +1,10 @@
+# Bloquea archivos de apoyo específicos (txt o notas de trabajo)
+# que se encuentren dentro de carpetas de datos
+**/data/**/*.txt
+
+
+# === BLOQUEO DE ARCHIVOS PESADOS (ANTIPATRONES) ===
+# Evita saturar el repositorio con binarios pesados
 *.csv
 *.xlsx
 *.xls
@@ -6,7 +13,11 @@
 *.pbix
 *.twb
 *.twbx
+*.xlsm
+
+# === ARCHIVOS DE SISTEMA Y ENTORNO ===
 .env
 venv/
 __pycache__/
 .ipynb_checkpoints/
+.DS_Store
